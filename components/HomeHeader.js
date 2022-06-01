@@ -1,12 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Image, TextInput } from "react-native";
+import { COLORS, FONTS, SiZES, assets, SIZES } from "../constants";
 
 const HomeHeader = () => {
-    return (
-        <View>
-            <Text>HomeHeader</Text>
-        </View>
-    )
-}
+  return (
+    <View style={{ backgroundColor: COLORS.primary, padding: SIZES.font }}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Image
+          source={assets.logo}
+          resizeMode="contain"
+          style={{ width: 90, height: 25 }}
+        />
+      </View>
+    </View>
+  );
+};
 
-export default HomeHeader
+export default HomeHeader;
